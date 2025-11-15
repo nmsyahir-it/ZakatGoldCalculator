@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_background">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue_primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zakat Gold Calculator"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue_primary"
+                android:gravity="center"
+                android:paddingBottom="16dp" />
+
+            <!-- Instructions -->
+            <TextView
+                android:id="@+id/tvInstructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter gold weight and value per gram. Choose Keep or Wear. Then tap Calculate."
+                android:textSize="14sp"
+                android:textColor="@color/text_dark"
+                android:paddingBottom="12dp" />
+
+            <!-- Gold Weight -->
+            <EditText
+                android:id="@+id/etGoldWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter gold weight (grams)"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:background="@android:drawable/editbox_background_normal" />
+
+            <!-- Gold Price -->
+            <EditText
+                android:id="@+id/etGoldPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter gold value per gram (RM)"
+                android:padding="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#888888"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/editbox_background_normal" />
+
+            <!-- Keep / Wear -->
+            <RadioGroup
+                android:id="@+id/radioGroupType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="16dp">
+
+                <RadioButton
+                    android:id="@+id/rbKeep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keep"
+                    android:textSize="16sp"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rbWear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wear"
+                    android:layout_marginStart="32dp"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <!-- Calculate Button -->
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CALCULATE ZAKAT"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/blue_primary"
+                android:textColor="@color/white"
+                android:padding="12dp" />
+
+            <!-- Reset Button -->
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RESET"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/blue_primary"
+                android:textColor="@color/white"
+                android:padding="12dp" />
+
+            <!-- Result Box -->
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Result will appear here"
+                android:layout_marginTop="24dp"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:textColor="@color/text_dark"
+                android:background="@drawable/result_box" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

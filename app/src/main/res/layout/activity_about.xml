@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_background">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue_primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- Main content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About This Application"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue_primary"
+                android:paddingBottom="20dp" />
+
+            <!-- Developer Info -->
+            <TextView
+                android:id="@+id/tvDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• Developer: NIK MOHAMMAD SYAHIR BIN MOHD KAMAL\n• Student ID: 2024254764\n• Course: ICT602"
+                android:textSize="16sp"
+                android:textColor="@color/text_dark"
+                android:lineSpacingExtra="6dp"
+                android:paddingBottom="24dp" />
+
+            <!-- GitHub Link -->
+            <TextView
+                android:id="@+id/tvLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:text="🔗 GitHub Project: https://github.com/nmsyahir-it/ZakatGoldCalculator.git"
+                android:textSize="16sp"
+                android:textColor="@color/blue_accent"
+                android:paddingBottom="32dp" />
+
+            <!-- Footer -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="© 2025 NIK SYAHIR. All rights reserved."
+                android:textSize="14sp"
+                android:textColor="#777777"
+                android:paddingTop="12dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

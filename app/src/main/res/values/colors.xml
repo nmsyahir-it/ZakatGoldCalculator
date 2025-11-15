@@ -1,0 +1,11 @@
+<resources>
+    <color name="blue_primary">#1565C0</color>
+    <color name="blue_primary_dark">#0D47A1</color>
+    <color name="blue_accent">#42A5F5</color>
+
+    <color name="app_background">#F0F6FF</color>
+    <color name="result_background">#E8F1FF</color>
+
+    <color name="text_dark">#333333</color>
+    <color name="white">#FFFFFF</color>
+</resources>

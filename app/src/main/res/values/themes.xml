@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Light Mode Theme -->
+    <!-- Main Light Theme -->
     <style name="Theme.ZakatGoldCalculator" parent="Theme.Material3.Light.NoActionBar">
 
         <!-- Primary colors -->
@@ -8,15 +9,42 @@
         <item name="colorPrimaryContainer">@color/blue_primary_dark</item>
         <item name="colorOnPrimary">@color/white</item>
 
-        <!-- Secondary -->
+        <!-- Secondary colors -->
         <item name="colorSecondary">@color/blue_accent</item>
 
         <!-- App background -->
         <item name="android:windowBackground">@color/app_background</item>
 
-        <!-- Toolbar text/icons -->
-        <item name="android:textColorPrimary">@color/white</item>
+        <!-- Default text color -->
+        <item name="android:textColorPrimary">@color/text_dark</item>
 
+        <!-- Toolbar -->
+        <item name="toolbarStyle">@style/ToolbarStyle</item>
+        <item name="actionBarTheme">@style/PopupMenuStyle</item>
+
+        <!-- ⭐ FIX: FIRST SPLASH SCREEN BACKGROUND -->
+        <item name="android:windowSplashScreenBackground">@color/blue_primary_dark</item>
+
+    </style>
+
+    <!-- Toolbar Style -->
+    <style name="ToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="titleTextColor">@color/white</item>
+        <item name="subtitleTextColor">@color/white</item>
+        <item name="android:background">@color/blue_primary</item>
+        <item name="popupTheme">@style/PopupMenuStyle</item>
+    </style>
+
+    <!-- Popup menu fix -->
+    <style name="PopupMenuStyle" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textColorPrimary">@color/text_dark</item>
+        <item name="android:itemTextAppearance">@style/PopupMenuTextStyle</item>
+    </style>
+
+    <style name="PopupMenuTextStyle">
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
 </resources>

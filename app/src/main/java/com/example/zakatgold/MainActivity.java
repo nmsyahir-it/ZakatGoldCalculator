@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         // Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("Zakat Gold Calculator");
+        }
 
         // Inputs
         etGoldWeight = findViewById(R.id.etGoldWeight);
@@ -102,18 +105,18 @@ public class MainActivity extends AppCompatActivity {
 
         // Final result (formatted)
         String result =
-                "● Gold Type: " + type +
-                        "\n● Total Gold Weight: " + weight + " g" +
-                        "\n● Uruf (Threshold): " + uruf + " g" +
-                        "\n● Gold Weight After Uruf: " + excess + " g" +
-                        "\n\n============================\n\n" +
-                        "💰 Total Gold Value: RM " + String.format("%.2f", totalGoldValue) +
+                "Gold Type: " + type +
+                        "\nTotal Gold Weight: " + weight + " g" +
+                        "\nUruf (Threshold): " + uruf + " g" +
+                        "\nGold Weight After Uruf: " + excess + " g" +
+                        "\n\n💰 Total Gold Value: RM " + String.format("%.2f", totalGoldValue) +
                         "\n💰 Zakat Payable Value: RM " + String.format("%.2f", zakatPayableValue) +
                         "\n💰 Total Zakat (2.5%): RM " + String.format("%.2f", zakat);
 
+
         tvResult.setText(result);
 
-        // ⭐ NEW — Fade + Slide Animation
+        // Fade + Slide Animation
         tvResult.startAnimation(
                 AnimationUtils.loadAnimation(this, R.anim.fade_slide)
         );
